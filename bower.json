@@ -1,0 +1,18 @@
+{
+  "name": "optile",
+  "description": "Optile Demonstration",
+  "main": "index.js",
+  "authors": [
+    "Ross Stanton"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

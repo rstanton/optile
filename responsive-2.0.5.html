@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Ross' Optile Demo</title>
+	<meta charset="utf-8">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<script type="text/javascript" src="dist/optile/op-payment-widget-2.0.5.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="dist/optile/op-payment-widget-2.0.5.min.css">
+	<style>
+		@media only screen and (max-device-width: 736px) {
+			body {
+				background-color: #f2f2f2;
+			}
+		}
+	</style>
+	<head>
+		<script type="text/javascript">
+			//var opg_origin = 'https://resources.sandbox.oscato.com/';
+			
+			function initPaymentPage() {
+				var dict = {};
+				$('#paymentNetworks').checkoutList({
+					payButton: "submitBtn",
+					listUrl: "https://api.sandbox.oscato.com/pci/v1/5a16c66c2d221101886cf01fl9uc2au6pq1rh7oeflndg1nha2"
+				});
+			}
+
+			// Initialize the payment page
+			$(document).ready(function() {
+				initPaymentPage();
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="paymentNetworks"></div>
+		<button id="submitBtn" type="button"></button>
+	</body>
+
+</html>
