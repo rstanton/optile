@@ -4,7 +4,7 @@
   "description": "Optile Demonstration",
   "main": "index.js",
   "scripts": {
-    "start":"node node_modules\\http-server\\bin\\http-server -S",
+    "start":"node node_modules/http-server/bin/http-server -S",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ross Stanton",
