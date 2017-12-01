@@ -1,0 +1,131 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Optile",
+		"_postman_id": "2730b90e-85b3-452d-f54b-7f6e52805bcc",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://api.sandbox.oscato.com/api/lists",
+			"request": {
+				"url": "https://api.sandbox.oscato.com/api/lists",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "ASK ROSS!",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.optile.payment.enterprise-v1-extensible+json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.optile.payment.enterprise-v1-extensible+json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"transactionId\": \"1231231232\",\r\n  \"country\": \"GB\",\r\n  \"integration\":\"SELECTIVE_NATIVE\",\r\n  \"customer\": {\r\n    \"number\": \"1011021031\",\r\n    \"email\": \"ross.stanton@gmail.com\",\r\n    \"registration\":{\r\n      \"id\":\"5a1d9311e4497840dc23eb6eu\"\r\n    }\r\n  },\r\n  \"payment\": {\r\n    \"amount\": 19.99,\r\n    \"currency\": \"GBP\",\r\n    \"reference\": \"B&Q UK 22-11-2017\"\r\n  },\r\n  \"preselection\": {\r\n    \"deferral\": \"DEFERRED\"\r\n  },\r\n  \"style\" : {\r\n    \"client\":\"RESPONSIVE\",\r\n    \"resolution\":\"2x\"\r\n  },\r\n  \"callback\": {\r\n    \"returnUrl\": \"https://127.0.0.1:8080/payment/success\",\r\n    \"cancelUrl\": \"https://127.0.0.1:8080/payment/cancel\",\r\n    \"notificationUrl\":\"https://127.0.0.1:8080/shop/notify.html\"\r\n  }\r\n}"
+				},
+				"description": "Optile List Request\t"
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.sandbox.oscato.com/pci/v1/5a1d9286a6cd3d017fdfbdb5l46gk7inlb8njo5rqriqrcaacr/VISA/charge",
+			"request": {
+				"url": "https://api.sandbox.oscato.com/pci/v1/5a1d93052d221101886cfff0lnfnm6hbmnrro46ef1kpui21o8/VISA/charge",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json, text/javascript, */*; q=0.01",
+						"description": ""
+					},
+					{
+						"key": "Origin",
+						"value": "https://resources.sandbox.oscato.com",
+						"description": ""
+					},
+					{
+						"key": "X-DevTools-Emulate-Network-Conditions-Client-Id",
+						"value": "027f57a3-b805-458d-9976-0ac37f0d38a1",
+						"description": ""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "DNT",
+						"value": "1",
+						"description": ""
+					},
+					{
+						"key": "Referer",
+						"value": "https://resources.sandbox.oscato.com/paymentpage/iframe.html?listId=5a1d9286a6cd3d017fdfbdb5l46gk7inlb8njo5rqriqrcaacr&networks=MASTERCARD,VISA",
+						"description": ""
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"description": ""
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-GB,en;q=0.9",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"account\":{\"number\":\"4111111111111111\",\"expiryMonth\":\"02\",\"expiryYear\":\"2018\",\"verificationCode\":\"323\",\"holderName\":\"R Stanton\"},\"autoRegistration\":true}"
+				},
+				"description": "Charge Request"
+			},
+			"response": []
+		},
+		{
+			"name": "Registration Update",
+			"request": {
+				"url": "https://api.sandbox.oscato.com/api/lists",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic S0lOR0ZJU0hFUjpxYWtpY2IxZjZiNHAxc2pnaWhtN2wyMWpvNHBwcjNuc3Nkc2VuZGpy",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.optile.payment.enterprise-v1-extensible+json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.optile.payment.enterprise-v1-extensible+json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"transactionId\": \"1231231232\",\r\n  \"country\": \"GB\",\r\n  \"updateOnly\":true,\r\n  \"integration\":\"SELECTIVE_NATIVE\",\r\n  \"customer\": {\r\n    \"number\": \"1011021031\",\r\n    \"email\": \"ross.stanton@gmail.com\",\r\n    \"registration\":{\r\n      \"id\":\"5a1d9311e4497840dc23eb6eu\"\r\n    }\r\n  },\r\n  \"callback\": {\r\n    \"returnUrl\": \"https://127.0.0.1:8080/payment/success\",\r\n    \"cancelUrl\": \"https://127.0.0.1:8080/payment/cancel\",\r\n    \"notificationUrl\":\"https://127.0.0.1:8080/shop/notify.html\"\r\n  }\r\n}"
+				},
+				"description": "Optile List Request\t"
+			},
+			"response": []
+		}
+	]
+}
