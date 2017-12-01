@@ -1,6 +1,5 @@
 
 # Created by https://www.gitignore.io/api/node,bower,webstorm+all,intellij+all
-dist/**
 
 ### Bower ###
 bower_components
